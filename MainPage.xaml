@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:maps="http://schemas.microsoft.com/dotnet/2021/maui/maps"
+             x:Class="LocationTrackerAnushkaN.MainPage"
+             Title="MainView">
+
+    <!-- Row 0: the map (takes all free space). Row 1: the button. -->
+    <Grid RowDefinitions="*,Auto">
+
+        <!-- The map where the heat map circles are drawn. -->
+        <maps:Map x:Name="HeatMap"
+                  Grid.Row="0" />
+
+        <!-- Starts or stops saving the location. -->
+        <Button x:Name="TrackingButton"
+                Grid.Row="1"
+                Margin="16"
+                Text="Start Tracking"
+                Clicked="OnTrackingButtonClicked" />
+    </Grid>
+</ContentPage>
